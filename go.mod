@@ -1,4 +1,4 @@
-module github.com/peterfox/roadrunner-plugin-template
+module github.com/peterfox/octane-plugin
 
 go 1.16
 
