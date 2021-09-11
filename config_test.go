@@ -1,6 +1,8 @@
-package plugin
+package octane
 
 import (
+	"os"
+	"os/exec"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -9,7 +11,23 @@ import (
 func TestConfigInitDefaults(t *testing.T) {
 	cfg := Config{}
 
-	cfg.InitDefaults()
+	err := cfg.InitDefaults()
 
-	assert.Equal(t, "foobar", cfg.Value)
+	assert.Nil(t, err)
+
+	phpPath, err := exec.LookPath("php")
+
+	if err != nil {
+		t.Error("error", err)
+	}
+
+	workingDirectory, err := os.Getwd()
+
+	if err != nil {
+		t.Error("error", err)
+	}
+
+	assert.Equal(t, workingDirectory, cfg.AppBasePath)
+	assert.Equal(t, "production", cfg.Environment)
+	assert.Equal(t, phpPath, cfg.PHPBinary)
 }

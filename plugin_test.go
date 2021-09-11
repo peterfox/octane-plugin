@@ -1,4 +1,4 @@
-package plugin
+package octane
 
 import (
 	"github.com/spiral/roadrunner/v2/plugins/logger"

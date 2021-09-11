@@ -1,0 +1,14 @@
+{
+    "name": "peterfox/octane-plugin",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Fox",
+            "email": "peter.fox@peterfox.me"
+        }
+    ],
+    "require": {
+        "spiral/goridge": "^3.1"
+    }
+}

@@ -20,7 +20,7 @@ This repo can be used to scaffold a RoadRunner Plugin. Follow these steps to get
 2. Ideally you should rename the package in all the `.go` files from `plugin` to something else.
 
    ```go
-   package plugin
+   package octane
    ```
 3. Rename the plugin to whatever is appropriate, this should be kept to snake case:
    ```go
@@ -54,7 +54,7 @@ package container
 
 import (
     // ...
-    demoPlugin "github.com/peterfox/roadrunner-plugin-template"
+    demoPlugin "github.com/ylsideas/octane-plugin"
     // ...
 )
 
